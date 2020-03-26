@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="mapp.android.android_demo_app">
+
+    <application
+        android:name=".MappApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".DeepLinkActivity"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <data android:scheme="apx"/>
+                <data android:host="deeplink"/>
+
+                <action android:name="mapp.android.test1101" />
+
+                <action android:name="com.appoxee.VIEW_DEEPLINK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".MyPushBroadcastReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.appoxee.PUSH_OPENED" />
+                <action android:name="com.appoxee.PUSH_RECEIVED" />
+                <action android:name="com.appoxee.PUSH_DISMISSED" />
+
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

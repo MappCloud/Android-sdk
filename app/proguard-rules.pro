@@ -1,0 +1,2 @@
+-keep class com.appoxee.** { *; }
+-keepnames class com.appoxee.** { *; }

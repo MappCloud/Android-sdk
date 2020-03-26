@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">android-demo-app</string>
+    <string name="set_alias">Set Alias</string>
+    <string name="get_alias">Get Alias</string>
+    <string name="set_tag">Set Tag</string>
+    <string name="get_tag">Get Tag</string>
+    <string name="remove_tag">Remove Tag</string>
+    <string name="key_hint">Key</string>
+    <string name="numeric_value_hint">Numeric value</string>
+    <string name="set_num_field">Set Num Field</string>
+    <string name="string_value_hint">String value</string>
+    <string name="set_string_field">Set String Field</string>
+    <string name="get_attribute_value">Get Attribute Value</string>
+    <string name="device_info">Device info:</string>
+    <string name="get_device_info">Get Device Info</string>
+    <string name="fire_in_app">Fire in-app</string>
+</resources>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/aliasEtxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:lines="1"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
+        app:layout_constraintEnd_toStartOf="@+id/setAlias"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="Autofill,LabelFor"/>
+
+    <Button
+        android:id="@+id/setAlias"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/set_alias"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@+id/getAlias"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/aliasEtxt"
+        app:layout_constraintTop_toTopOf="@+id/aliasEtxt" />
+
+
+    <Button
+        android:id="@+id/getAlias"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/get_alias"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/setAlias"
+        app:layout_constraintTop_toTopOf="@+id/setAlias" />
+
+
+    <EditText
+        android:id="@+id/tagEtxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:lines="1"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
+        app:layout_constraintEnd_toStartOf="@+id/setTag"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/aliasEtxt"
+        tools:ignore="Autofill,LabelFor"/>
+
+    <Button
+        android:id="@+id/setTag"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/set_tag"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@+id/getTag"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/tagEtxt"
+        app:layout_constraintTop_toTopOf="@+id/tagEtxt" />
+
+
+    <Button
+        android:id="@+id/getTag"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/get_tag"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/setTag"
+        app:layout_constraintTop_toTopOf="@+id/setTag" />
+
+    <EditText
+        android:id="@+id/removeTagEtxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:lines="1"
+        android:maxLines="1"
+        app:layout_constraintEnd_toStartOf="@+id/removeTag"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tagEtxt"
+        app:layout_constraintVertical_chainStyle="spread"
+        tools:ignore="Autofill,LabelFor"/>
+
+    <Button
+        android:id="@+id/removeTag"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/remove_tag"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/setTag"
+        app:layout_constraintTop_toBottomOf="@+id/getTag"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <EditText
+        android:id="@+id/numFieldKeyEtxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/key_hint"
+        android:inputType="text"
+        android:lines="1"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
+        app:layout_constraintEnd_toStartOf="@+id/setAlias"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/removeTagEtxt"
+        tools:ignore="Autofill,LabelFor"/>
+
+    <EditText
+        android:id="@+id/numFieldValueEtxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/numeric_value_hint"
+        android:inputType="number"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@+id/getAlias"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/numFieldKeyEtxt"
+        app:layout_constraintTop_toTopOf="@+id/numFieldKeyEtxt"
+        tools:ignore="Autofill,LabelFor"/>
+
+
+    <Button
+        android:id="@+id/setNumField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/set_num_field"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/numFieldValueEtxt"
+        app:layout_constraintTop_toTopOf="@+id/numFieldValueEtxt" />
+
+
+    <EditText
+        android:id="@+id/strFieldKeyEtxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/key_hint"
+        android:inputType="text"
+        android:lines="1"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
+        app:layout_constraintEnd_toStartOf="@+id/strFieldValueEtxt"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/numFieldKeyEtxt"
+        tools:ignore="Autofill"/>
+
+    <EditText
+        android:id="@+id/strFieldValueEtxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/string_value_hint"
+        android:inputType="text"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@+id/setStrField"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/strFieldKeyEtxt"
+        app:layout_constraintTop_toTopOf="@+id/strFieldKeyEtxt"
+        tools:ignore="Autofill"/>
+
+
+    <Button
+        android:id="@+id/setStrField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/set_string_field"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/strFieldValueEtxt"
+        app:layout_constraintTop_toTopOf="@+id/strFieldValueEtxt" />
+
+    <EditText
+        android:id="@+id/attributeValueEtxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/key_hint"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@id/getAttributeValue"
+        app:layout_constraintEnd_toStartOf="@id/getAttributeValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/getAttributeValue"
+        tools:ignore="Autofill"/>
+
+    <Button
+        android:id="@+id/getAttributeValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/get_attribute_value"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/setStrField"
+        app:layout_constraintTop_toBottomOf="@id/setStrField" />
+
+    <TextView
+        android:id="@+id/deviceInfoLbl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="@string/device_info"
+        app:layout_constraintEnd_toStartOf="@id/getDeviceInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/getDeviceInfo" />
+
+    <TextView
+        android:id="@+id/deviceInfoTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:lines="3"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@id/getDeviceInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/deviceInfoLbl" />
+
+    <Button
+        android:id="@+id/getDeviceInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/get_device_info"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/setStrField"
+        app:layout_constraintTop_toBottomOf="@id/getAttributeValue" />
+
+    <Button
+        android:id="@+id/getInApps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fire_in_app"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/deviceInfoTxt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
