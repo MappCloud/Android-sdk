@@ -9,6 +9,13 @@ import com.appoxee.push.NotificationMode
 
 class MappApp : Application() {
 
+    private var APP_ID = "110036"
+    private var CEP_URL = "https://jamie.a.shortest-route.com"
+    private var GOOGLE_PROJECT_ID = "95178078564"
+    private var SDK_KEY = "5e707e276bbc50.59848000"
+    private var SERVER = "EMC_US"
+    private var TENANT_ID = "60210"
+
     val initFinishedListener =
         OnInitCompletedListener { successful, failReason ->
             infoLog("init completed listener - Application class")
@@ -17,13 +24,13 @@ class MappApp : Application() {
     override fun onCreate() {
         super.onCreate()
         val opt = AppoxeeOptions()
-        opt.sdkKey = "YOUR_SDK_KEY"
-        opt.googleProjectId = "YOUR_GOOGLE_PROJECT_ID"
-        opt.cepURL = "YOUR_CEP_URL"
-        opt.appID = "YOUR_APP_ID"
-        opt.tenantID = "YOUR_TENANT_ID"
+        opt.sdkKey = SDK_KEY
+        opt.googleProjectId = GOOGLE_PROJECT_ID
+        opt.cepURL = CEP_URL
+        opt.appID = APP_ID
+        opt.tenantID = TENANT_ID
         opt.notificationMode = NotificationMode.BACKGROUND_AND_FOREGROUND
-        opt.server = AppoxeeOptions.Server.TEST //your server
+        opt.server = AppoxeeOptions.Server.EMC_US //your server
 
         Appoxee.engage(this, opt)
 

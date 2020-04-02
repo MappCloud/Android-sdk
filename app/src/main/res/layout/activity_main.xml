@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="This SDK version is for testing only"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="#ff2200"/>
+
     <EditText
         android:id="@+id/aliasEtxt"
         android:layout_width="0dp"
@@ -18,7 +29,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/info"
         tools:ignore="Autofill,LabelFor"/>
 
     <Button
