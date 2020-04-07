@@ -138,7 +138,7 @@ class MainActivity : AppCompatActivity(), OnInitCompletedListener {
     override fun onNewIntent(intent: Intent?) {
         super.onNewIntent(intent)
 
-        handleRichPush(this,intent);
+        handleRichPush(this,intent)
     }
 
 }
