@@ -119,7 +119,7 @@ class MainActivity : AppCompatActivity(), OnInitCompletedListener {
         binding.getInApps.setOnClickListener {
             apx.triggerDMCCallInApp(
                 this,
-                "open_app"
+                "app_open"
             )
         }
 
