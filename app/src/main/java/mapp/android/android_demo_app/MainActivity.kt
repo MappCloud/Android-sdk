@@ -1,11 +1,11 @@
 package mapp.android.android_demo_app
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.appoxee.Appoxee
-import com.appoxee.Appoxee.OnInitCompletedListener
-import com.appoxee.Appoxee.instance
+import com.appoxee.Appoxee.*
 import com.appoxee.DeviceInfo
 import mapp.android.android_demo_app.databinding.ActivityMainBinding
 
@@ -21,6 +21,8 @@ class MainActivity : AppCompatActivity(), OnInitCompletedListener {
         setContentView(view)
 
         apx.addInitListener(this)
+
+        handleRichPush(this, intent)
 
         binding.getAlias.setOnClickListener {
 
@@ -132,4 +134,11 @@ class MainActivity : AppCompatActivity(), OnInitCompletedListener {
             apx.triggerDMCCallInApp(this, "app_open")
         }
     }
+
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+
+        handleRichPush(this,intent);
+    }
+
 }
