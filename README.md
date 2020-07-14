@@ -11,7 +11,7 @@ SDK documentation is available at [Mapp Cloud Mobile Integration](https://mapp-w
 # Installation
 Gradle
 ```groovy
-implementation 'com.mapp.sdk:mapp-android:6.0.7'
+implementation 'com.mapp.sdk:mapp-android:6.0.8'
 ```
 
 The SDK requires that you enable Java 8 in your builds.
@@ -63,7 +63,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'com.mapp.sdk:mapp-android:6.0.7'
+    implementation 'com.mapp.sdk:mapp-android:6.0.8'
 }
 
 apply plugin: 'com.google.gms.google-services'
