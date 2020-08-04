@@ -126,12 +126,15 @@ class MainActivity : AppCompatActivity(), OnInitCompletedListener {
     }
 
     override fun onInitCompleted(successful: Boolean, failReason: Exception?) {
-
-        infoLog("init completed listener - MainActivity")
-
-        this.toast("init completed listener - MainActivity", Toast.LENGTH_SHORT)
-        runOnUiThread {
-            apx.triggerDMCCallInApp(this, "app_open")
+        if (failReason != null) {
+            failReason.message?.let { infoLog(it) }
+        }
+        else {
+            infoLog("init completed listener - MainActivity")
+            runOnUiThread {
+                this.toast("init completed listener - MainActivity", Toast.LENGTH_SHORT)
+                apx.triggerDMCCallInApp(this, "app_open")
+            }
         }
     }
 
