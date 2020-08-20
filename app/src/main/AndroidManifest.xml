@@ -30,6 +30,9 @@
                 <action android:name="com.appoxee.VIEW_DEEPLINK"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
+
+                <!-- mandatory for Android FCM SDK v6.0.9 and later-->
+                <category android:name="${applicationId}" />
             </intent-filter>
         </activity>
 
@@ -42,6 +45,7 @@
                 <action android:name="com.appoxee.PUSH_RECEIVED" />
                 <action android:name="com.appoxee.PUSH_DISMISSED" />
 
+                <!-- mandatory for Android FCM SDK v6.0.9 and later-->
                 <category android:name="${applicationId}" />
             </intent-filter>
         </receiver>
