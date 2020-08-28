@@ -128,4 +128,4 @@ An account manager will provide you info which one you should use in your applic
 
 
 
- You can find older version of SDK at this [link](https://developers.mapp.com/#eu-region) 
+ You can find older version of SDK at this [link](https://mapp-wiki.atlassian.net/wiki/spaces/MIC/pages/430257/Mapp+Cloud+Android+SDK+Documentation) 
