@@ -8,10 +8,12 @@ SDK documentation is available at [Mapp Cloud Mobile Integration](https://mapp-w
 - [Installation](#installation)
 - [Initialization](#initialization)
 
+We use mavenCentral for version 6.0.15+, instead of Jcentra
+
 # Installation
 Gradle
 ```groovy
-implementation 'com.mapp.sdk:mapp-android:6.0.12'
+implementation 'com.mapp.sdk:mapp-android:6.0.16'
 ```
 
 The SDK requires that you enable Java 8 in your builds.
