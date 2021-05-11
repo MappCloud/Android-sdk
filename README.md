@@ -8,7 +8,8 @@ SDK documentation is available at [Mapp Cloud Mobile Integration](https://mapp-w
 - [Installation](#installation)
 - [Initialization](#initialization)
 
-We use mavenCentral for version 6.0.15+, instead of Jcentra
+We use mavenCentral for version 6.0.15+, instead of Jcenter
+Lattest verison on Jcenter is 6.0.12
 
 # Installation
 Gradle
