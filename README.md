@@ -14,7 +14,7 @@ Lattest verison on Jcenter is 6.0.12
 # Installation
 Gradle
 ```groovy
-implementation 'com.mapp.sdk:mapp-android:6.0.16'
+implementation 'com.mapp.sdk:mapp-android:6.0.18'
 ```
 
 The SDK requires that you enable Java 8 in your builds.
@@ -40,12 +40,12 @@ Make sure your application build.gradle file include the applicationId attribute
 
 ```
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    compileSdkVersion 31
+    buildToolsVersion "33.0.0"
     defaultConfig {
         applicationId "com.yourapppackage.app" . //make sure you have this   
         minSdkVersion 19
-        targetSdkVersion 29
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -66,7 +66,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'com.mapp.sdk:mapp-android:6.0.12'
+    implementation 'com.mapp.sdk:mapp-android:6.0.18'
 }
 
 apply plugin: 'com.google.gms.google-services'
@@ -76,6 +76,13 @@ In the Application class of your android project, add following code
 
 ```
 public class AppoxeeTestApp extends Application {
+
+    private Appoxee.OnInitCompletedListener initFinishedListener = new Appoxee.OnInitCompletedListener() {
+        @Override
+        public void onInitCompleted(boolean successful, Exception failReason) {
+            Log.i("APX", "init completed listener - Application class");
+        }
+    };
 ...
 @Override
 public void onCreate() {
@@ -83,17 +90,13 @@ public void onCreate() {
     ...
     AppoxeeOptions opt = new AppoxeeOptions();
     opt.sdkKey = SDK_KEY;
-    opt.googleProjectId = GOOGLE_PROJECT_ID;
-    opt.cepURL= CEP_URL;//(optional for SDK 6.0.0 and above)
     opt.appID = APP_ID;
     opt.tenantID= TENANT_ID;
-   //Only for version 5.0.10+
     opt.notificationMode = NotificationMode.BACKGROUND_AND_FOREGROUND; (optional)
-    //for SDK 6.0.0 and above
     opt.server = Appoxee.Server.L3;
  
     Appoxee.engage(this, opt);
-    //This line is necessary for Android Oreo.
+    Appoxee.instance().addInitListener(initFinishedListener);
     Appoxee.instance().setReceiver(MyPushBroadcastReceiver.class);
     //Necessary for applications with locked screen rotation. 
     Appoxee.setOrientation(this, ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
